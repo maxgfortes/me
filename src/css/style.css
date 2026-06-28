@@ -77,7 +77,7 @@ background: linear-gradient(0deg, rgba(8, 8, 8, 0) 0%, rgba(8, 8, 8, 1) 100%);
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background-image: url('https://maxgfortes.github.io/maxgfortes/src/assets/bg/bg.gif');
+  background-image: url('../src/assets/bg/bg.gif');
   background-size: cover;
   background-position: center;
 }
