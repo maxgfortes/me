@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'Helvetica Neue Local';
+  src: url('./public/font/HelveticaNeueRoman.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Local';
+  src: url('./public/font/HelveticaNeueBold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  scrollbar-color: canvasText transparent;
+}
+
+*, *::after, *::before { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: #000;
+  font-family: 'Helvetica Neue Local', Helvetica, Arial, sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/public/img/bg.jpeg') center / cover no-repeat;
+  mask: linear-gradient(-20deg, transparent 50%, white);
+  pointer-events: none;
+}
+
+main { width: 720px; max-width: calc(100vw - 2rem); margin: 0 auto; }
+section { margin-block: 4rem; }
+section p { line-height: 1.5; }
+
+footer {
+  padding: 177px 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.placeholder { margin-bottom: 200px; }
+
+.navbar {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 17px;
+}
+
+.logo { display: flex; width: 100%; height: 100%; }
+.logo.left { justify-content: flex-start; }
+.logo.right { justify-content: flex-end; }
+.logo svg { max-width: 67px; max-height: 67px; }
+
+.video-section { text-align: center; }
+.video-section .section-title { margin: 0 0 0.75rem; line-height: 1.05; text-wrap: balance; }
+.video-section .section-subtitle {
+  max-width: 46ch;
+  margin: 0 auto 2.5rem;
+  color: color-mix(in oklch, canvasText, canvas 35%);
+  text-wrap: balance;
+}
+
+.video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; text-align: left; }
+
+.video-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: color-mix(in oklch, canvasText, canvas 92%);
+  box-shadow: 0 4px 16px rgb(17 17 26 / 5%), 0 8px 24px rgb(17 17 26 / 5%), 0 16px 56px rgb(17 17 26 / 5%);
+  cursor: pointer;
+  text-align: left;
+}
+
+.video-card .video-preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease-out;
+}
+
+.video-card:hover .video-preview { filter: brightness(0.85); }
+
+.video-card .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  translate: -50% -50%;
+  background: hsl(0 0% 100% / 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 2px 1px color-mix(in oklch, canvasText, #0000 85%) inset, 0 4px 16px rgb(17 17 26 / 15%);
+  transition: scale 0.26s ease-out;
+}
+
+.video-card:hover .play-button { scale: 1.08; }
+.video-card .play-button svg { width: 22px; height: 22px; fill: #111; }
+
+.video-card .video-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 1.1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: linear-gradient(to top, rgb(0 0 0 / 65%), transparent);
+}
+
+.video-player { width: min(960px, calc(100vw - 2rem)); padding: 0; border: 0; background: #000; color: #fff; }
+.video-player::backdrop { background: rgb(0 0 0 / 0.8); backdrop-filter: blur(4px); }
+.video-player video { display: block; width: 100%; max-height: calc(100vh - 2rem); }
+
+.video-player-close {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 0.7);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.5rem;
+}
+
+.footer-min { padding: 9px; color: #333; }
+
+@media (max-width: 640px) {
+  .video-grid { grid-template-columns: 1fr; }
+  .video-card .play-button { width: 52px; height: 52px; }
+}
