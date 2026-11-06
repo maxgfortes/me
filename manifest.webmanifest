@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "maxgfortes | Programador Front end e Designer UI/UX",
+  "short_name": "maxgfortes",
+  "description": "Portfólio de maxgfortes, programador front end e designer UI/UX freelancer.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0c0c0c",
+  "theme_color": "#324c8f",
+  "categories": ["portfolio", "personalization", "productivity"],
+  "icons": [
+    { "src": "./public/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./public/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./public/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

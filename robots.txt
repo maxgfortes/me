@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /abercrombie-2007/
+
+Sitemap: https://www.rockstarnorth.pw/sitemap.xml
