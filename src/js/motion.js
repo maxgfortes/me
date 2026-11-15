@@ -1,4 +1,3 @@
-/* Scroll and pointer animation. Everything is skipped for reduced motion. */
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -16,7 +15,6 @@
     els.forEach((el) => io.observe(el));
   };
 
-  /* section titles rise word by word from behind a mask */
   $$('.section-title').forEach((title) => {
     const words = title.textContent.trim().split(/\s+/);
     title.textContent = '';
@@ -32,7 +30,6 @@
   });
   once($$('.section-title'), (el) => el.classList.add('in'));
 
-  /* lists arrive one row at a time */
   [
     ['.stack-group', '.stack-item'],
     ['.music-grid', '.music-item'],
@@ -54,7 +51,6 @@
     once(roots, (el) => el.classList.add('in'), { threshold: 0.05 });
   });
 
-  /* counters run up to their real value */
   const format = new Intl.NumberFormat('pt-BR');
   once($$('.stat-number'), (el) => {
     const match = el.textContent.trim().match(/^([\d.]+)(.*)$/);
@@ -71,7 +67,7 @@
     requestAnimationFrame(tick);
   });
 
-  /* footer wordmark, letter by letter */
+
   const mark = document.querySelector('.footer-mark');
   if (mark) {
     const letters = mark.textContent.trim();
@@ -85,15 +81,14 @@
     once([mark], (el) => el.classList.add('in'));
   }
 
-  /* wallet passes slide up out of the pocket */
   once($$('.wallet'), (el) => el.classList.add('in'));
 
-  /* hero content lifts and fades as you leave it */
+
   const hero = document.querySelector('.welcome');
   const heroParts = $$('.welcome-title, .welcome-rows');
   setTimeout(() => heroParts.forEach((el) => { el.style.animation = 'none'; }), 1400);
 
-  /* photos turn like a cover flow around the centre of the rail */
+
   const rail = document.getElementById('albumRail');
   const albums = rail ? $$('.area-card', rail) : [];
   const flow = () => {
@@ -131,7 +126,6 @@
     flow();
   }
 
-  /* project cards tilt toward the pointer, and the glass glare follows it */
   if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
     $$('.project-card').forEach((card) => {
       card.addEventListener('pointermove', (e) => {

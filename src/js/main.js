@@ -92,6 +92,12 @@ document.querySelectorAll("a[data-nav-btn]").forEach(link => {
 
 });
 
+
+
+
+
+
+
   document.addEventListener('dragstart', (e) => e.preventDefault());
 
   /* photo rail: the snapping comes from CSS; this adds arrows and page dots */
@@ -203,9 +209,6 @@ document.querySelectorAll("a[data-nav-btn]").forEach(link => {
 │_│ │_│ │_│╲__,_╱_╱╲_╲__, │_│ ╲___╱│_│   ╲__╲___││___╱
                       __╱ │                           
                      │___╱                            
-
-
-
 
 
                      

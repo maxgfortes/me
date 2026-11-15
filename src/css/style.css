@@ -2660,11 +2660,17 @@ section[id], .contact-col { scroll-margin-top: calc(50px + env(safe-area-inset-t
 }
 
 .footer-mark.in span { opacity: 1; transform: none; }
-
+/* 
 @media (prefers-reduced-motion: reduce) {
   .js .st { opacity: 1; translate: none; transition: none; }
   .player.playing .player-eq i { animation: none; height: 9px; }
   .intro-grid .da-card.revealed, .wallet.in .pass { animation: none; }
   .footer-mark span { opacity: 1; transform: none; }
   .section-title .word > span { transform: none; }
+} */
+
+@media (pointer: coarse) {
+  .dialog-box {
+    display: none;
+  }
 }
