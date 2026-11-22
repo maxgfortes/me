@@ -18,92 +18,25 @@ const noBtn = document.getElementById("noBtn");
 const nameField = document.getElementById("nameField");
 
 const questions = [
-    {
-        title: "Pergunta 1/17",
-        text: "Você gosta de mim?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 2/17",
-        text: "Você fala inglês?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 3/17",
-        text: "Você gostaria de viajar comigo?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 4/17",
-        text: "Você pesa menos de 64kg?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 5/17",
-        text: "Você gosta que seu namorado a chame de mommy?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 6/17",
-        text: "Você tem interesse em BDSM?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 7/17",
-        text: "Sua cor de pele é escala 4 ou abaixo na Escala de Fitzpatrick?",
-        correct: "no"
-    },
-    {
-        title: "Pergunta 8/17",
-        text: "Você já teve pensamentos suicidas, automutilação ou depressão?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 9/17",
-        text: "Você acha ridículo homens/garotos que jogam como hobby?",
-        correct: "no"
-    },
-    {
-        title: "Pergunta 10/17",
-        text: "Você se sente sozinha às vezes?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 11/17",
-        text: "Você tem hipersexualidade?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 12/17",
-        text: "Você gosta de dias quentes?",
-        correct: "no"
-    },
-    {
-        title: "Pergunta 13/17",
-        text: "Você é loira naturalmente?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 14/17",
-        text: "Você se considera uma pessoa pobre de espírito?",
-        correct: "no"
-    },
-    {
-        title: "Pergunta 15/17",
-        text: "Você gosta do estilo preppy, college 2005/2012?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 16/17",
-        text: "Você tem problemas, mas acha que ainda assim escolheria tentar melhorar se isso machucasse alguém que você ama?",
-        correct: "yes"
-    },
-    {
-        title: "Pergunta 17/17",
-        text: "Você gostaria de ser feliz?",
-        correct: "yes"
-    },
+    { title: "Pergunta 1/16", text: "Você gosta de mim?", correct: "yes" },
+    { title: "Pergunta 2/16", text: "Você fala inglês, ou topa praticar comigo?", correct: "yes" },
+    { title: "Pergunta 3/16", text: "Você gosta de conversar por horas sobre qualquer coisa, até sobre nada?", correct: "yes" },
+    { title: "Pergunta 4/16", text: "Você acha que um relacionamento precisa ser amizade antes de tudo?", correct: "yes" },
+    { title: "Pergunta 5/16", text: "Você gosta de brincar e fazer piada com quem ama, sem ofender de verdade?", correct: "yes" },
+    { title: "Pergunta 6/16", text: "Quando algo te incomoda, você consegue falar com calma em vez de explodir ou xingar?", correct: "yes" },
+    { title: "Pergunta 7/16", text: "Você respeita quando alguém diz 'isso eu não quero que você faça ou poste'?", correct: "yes" },
+    { title: "Pergunta 8/16", text: "Você acha ridículo homens/garotos que jogam como hobby?", correct: "no" },
+    { title: "Pergunta 9/16", text: "Você se sente bem em momentos tranquilos, com música, filme e silêncio juntos?", correct: "yes" },
+    { title: "Pergunta 10/16", text: "Você gosta de frio, chuva e dias nublados?", correct: "yes" },
+    { title: "Pergunta 11/16", text: "Você gosta do estilo preppy, college 2005/2012?", correct: "yes" },
+    { title: "Pergunta 12/16", text: "Você se sente sozinha às vezes?", correct: "yes" },
+    { title: "Pergunta 13/16", text: "Você consegue ouvir sobre medos, inseguranças e passado difícil sem rir nem julgar?", correct: "yes" },
+    { title: "Pergunta 14/16", text: "Você toparia construir algo comigo (um projeto, um mundo, uma rotina), mesmo devagar?", correct: "yes" },
+    { title: "Pergunta 15/16", text: "Mesmo com medo, você escolheria tentar melhorar, pensando em quem você ama?", correct: "yes" },
+    { title: "Pergunta 16/16", text: "Você gostaria de ser feliz?", correct: "yes" },
 ];
+
+// voce nunca vai ser como a anastasia foi para mim.
 
 let currentQuestion = 0;
 let score = 0;
