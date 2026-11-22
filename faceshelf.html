@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>maxgfortes | The Faceshelf</title>
+  <meta name="description" content="Portfólio de maxgfortes, programador front end e designer UI/UX freelancer no Brasil. Criador da RealMe e da Synapse, faço sites, apps e interfaces sob medida.">
+  <meta name="author" content="maxgfortes">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.rockstarnorth.pw/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="maxgfortes">
+  <meta property="og:title" content="maxgfortes | Programador Front end e Designer UI/UX Freelancer">
+  <meta property="og:description" content="Portfólio de maxgfortes, programador front end e designer UI/UX freelancer no Brasil. Criador da RealMe e da Synapse, faço sites, apps e interfaces sob medida.">
+  <meta property="og:url" content="https://www.rockstarnorth.pw/">
+  <meta property="og:image" content="https://www.rockstarnorth.pw/public/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="maxgfortes | Programador Front end e Designer UI/UX Freelancer">
+  <meta name="twitter:description" content="Portfólio de maxgfortes, programador front end e designer UI/UX freelancer no Brasil. Criador da RealMe e da Synapse, faço sites, apps e interfaces sob medida.">
+  <meta name="twitter:image" content="https://www.rockstarnorth.pw/public/img/og.jpg">
+
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="theme-color" content="#fff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="maxgfortes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="./public/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./public/icons/favicon-48.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./src/css/faceshelf.css">
+</head>
+<body>
+
+<div class="nav-top">
+    <div class="nav"><img src="/public/img/faceshelf.png" alt="faceshelf"></div>
+</div>
+
+<div class="main">
+    <div class="form-area">
+        <div class="welcome-alert" id="welcome">
+            <div class="title">Bem Vindo ao Faceshelf</div>
+            <div class="text">Aqui você pode ver seu nivel de compatibilidade com o Maximus.<br>Descubra se isso faz sentido para ele e para você antes de gastar o tempo dos dois.<br>Escreva seu nome para começar.</div>
+            <button class="btn" id="startBtn">Começar!</button>
+            <input class="input" type="text" id="nameField" placeholder="Seu nome e sobrenome">
+        </div>
+        <div class="questions-area hidden" id="questions">
+            <div class="title" id="questionTitle"></div>
+            <div class="text" id="questionText"></div>
+            <div class="question-btns">
+                <button class="btn" id="yesBtn">Sim</button>
+                <button class="btn no" id="noBtn">Não</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>made for you by maxgfortes 2026</p><a href="/index.html">Home</a>
+    </div>
+</div>
+
+<script type="module" src="./src/js/faceshelf.js"></script>
+</body>
+</html>
