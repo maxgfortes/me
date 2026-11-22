@@ -37,6 +37,7 @@ const questions = [
 ];
 
 // voce nunca vai ser como a anastasia foi para mim.
+// mas eu to disposto a tentar...
 
 let currentQuestion = 0;
 let score = 0;
